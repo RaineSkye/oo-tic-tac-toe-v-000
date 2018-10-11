@@ -87,7 +87,7 @@ class TicTacToe
 end
 
 def draw?
-  !won?(@board) && full?(@board)
+  !won? && full?
 end
 
 def over?
@@ -100,14 +100,6 @@ def winner
   end
 end
 
-def play
-  turn until over?
-  if won?
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?
-    puts "Cat's Game!"
-  end
-end
 
 
 end
