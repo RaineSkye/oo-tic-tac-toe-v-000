@@ -101,14 +101,12 @@ def winner
 end
 
 def play
-  until won?
+when turn < 9
     turn
-  elsif won?
+when won?
     puts "Congratulations #{winner}!"
-  else draw?
+when draw?
     puts "Cat's Game!"
-  end
-end
 end
 
 end
