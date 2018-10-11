@@ -101,7 +101,7 @@ def winner
 end
 
 def play
-  turn(@board) until over?(@board)
+  turn until over?(@board)
   if won?(@board)
     puts "Congratulations #{winner(@board)}!"
   elsif draw?(@board)
