@@ -33,7 +33,7 @@ class TicTacToe
     @board[index] = current_player
   end
 
-  def position_taken?(index)
+  def position_taken?(@board,index)
     @board[index]== "X" || @board[index]== "O"
   end
 
