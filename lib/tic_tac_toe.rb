@@ -100,15 +100,13 @@ def winner
   end
 end
 
-def play
-while turn < 9
-    turn
-  end
- if won?
-    puts "Congratulations #{winner}!"
-else draw?
+def play(board)
+  turn(board) until over?(board)
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
     puts "Cat's Game!"
-end
+  end
 end
 
 end
