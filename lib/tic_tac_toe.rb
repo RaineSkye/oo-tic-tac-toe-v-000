@@ -74,7 +74,7 @@ class TicTacToe
         return player
       end
 
-    def won?
+    def won?(@board)
       WIN_COMBINATIONS.detect do|combo|
         @board[combo[0]] == @board[combo[1]] &&
           @board[combo[1]] == @board[combo[2]] &&
@@ -95,16 +95,16 @@ def over?
 end
 
 def winner
-  if winning_combo = won?(board)
+  if winning_combo = won?(@board)
     @board[winning_combo.first]
   end
 end
 
-def play(board)
-  turn(board) until over?(board)
-  if won?(board)
+def play
+  turn(@board) until over?(@board)
+  if won?(@board)
     puts "Congratulations #{winner(board)}!"
-  elsif draw?(board)
+  elsif draw?(@board)
     puts "Cat's Game!"
   end
 end
