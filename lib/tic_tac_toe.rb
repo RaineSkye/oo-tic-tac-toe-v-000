@@ -101,12 +101,12 @@ def winner
 end
 
 def play
-  case
-when turn < 9
+while turn < 9
     turn
-when won?
+  end
+ if won?
     puts "Congratulations #{winner}!"
-when draw?
+else draw?
     puts "Cat's Game!"
 end
 end
