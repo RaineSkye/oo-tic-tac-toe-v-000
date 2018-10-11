@@ -101,12 +101,14 @@ def winner
 end
 
 def play
+  case
 when turn < 9
     turn
 when won?
     puts "Congratulations #{winner}!"
 when draw?
     puts "Cat's Game!"
+end
 end
 
 end
